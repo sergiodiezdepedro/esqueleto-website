@@ -1,0 +1,135 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bk: 48rem;
+$light-color: wheat;
+$links-color: brown;
+$links-color-hover: red;
+$remark-color: #ff3d00;
+$dark-color: #3e2723;
+$fuente-principal: Helvetica,Arial,sans-serif;
+body {
+    font-family: $fuente-principal;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cabecera {
+    background-color: $light-color;
+    &__contenedor {
+        @media screen and (min-width: $bk) {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media screen and (max-width: $bk - 1) {
+            padding: .5rem 0;
+            text-align: center;
+            font-size: .8rem;
+        }
+    }
+    &__logo {
+        width: 10%;
+    }
+}
+
+.menu__raiz {
+    list-style: none;
+    @media screen and (min-width: $bk) {
+        display: flex;
+    }
+}
+
+.menu__item {
+    margin-right: .5rem;
+    &:last-child {
+        margin-right: 0;
+    }
+    @media screen and (max-width: $bk - 1) {
+        display: inline-block;
+    }
+}
+
+.menu__link {
+    color: $links-color;
+    text-decoration: none;
+    text-transform: capitalize;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.contenedor {
+    width: 80%;
+    margin: 1rem auto 2rem;
+    @media screen and (min-width: $bk) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.main {
+    @media screen and (min-width: $bk) {
+        width: 80%;
+    }
+}
+
+.main,
+.main--full {
+    h1 {
+        color: $remark-color;
+        margin-bottom: 1rem;
+    }
+    p {
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (max-width: $bk - 1) {
+        margin-bottom: 2rem;
+    }
+}
+
+.aside {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__cabecera {
+        margin-bottom: 1rem;
+        color: $remark-color;
+    }
+    &__link {
+        margin-bottom: 1rem;
+        color: $links-color;
+        text-decoration: none;
+        &:hover {
+            color: $links-color-hover;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $dark-color;
+    text-align: center;
+    padding: 1rem;
+    &__texto {
+        color: $light-color;
+        font-weight: bold;
+    }
+}

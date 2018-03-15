@@ -1,0 +1,13 @@
+extends templates/template.pug
+append config
+    -tituloPagina = 'Inicio'
+    -paginaActual = 'inicio'
+    -aside = false
+    -main = false
+block main
+    h1 Bienvenidos
+    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, delectus tenetur ipsa vero veniam exercitationem quos possimus perspiciatis maxime quasi voluptate? Saepe aut numquam nostrum, earum eligendi sapiente exercitationem explicabo!
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nemo doloremque esse ratione consequuntur autem numquam minima pariatur facere perferendis illum impedit reprehenderit cum nobis, voluptatibus dolorum sed officiis ab.
+block footer
+    p.footer__texto
+        small &copy ACME Inc. | 2018

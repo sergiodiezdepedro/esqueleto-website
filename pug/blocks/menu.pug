@@ -1,0 +1,6 @@
+ul.menu__raiz
+    each pagina in paginas
+        if pagina == 'inicio'
+            li.menu__item: a.menu__link(href='/') #{pagina}
+        else
+            li.menu__item: a.menu__link(href=pagina + '.html') #{pagina}

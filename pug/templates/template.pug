@@ -1,0 +1,35 @@
+block config
+    include ../config/config.pug
+
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        meta(name="description" content=descripcion)
+        title #{tituloPagina} | #{tituloSitio}
+        link(rel="stylesheet" href="css/estilos.css")
+    body
+        header.cabecera
+            .cabecera__contenedor
+                a(href="/")
+                    img.cabecera__logo(src="/img/logo.svg")
+                nav.menu--principal
+                    include ../blocks/menu.pug
+        .banner
+            block banner
+                img(src='/img/' + paginaActual + '.jpg')
+        .contenedor
+            if main 
+                main.main
+                    block main
+            else
+                main.main--full
+                    block main
+            if aside
+                aside.aside
+                    block aside
+                        include ../blocks/siguenos.pug
+        footer.footer
+            block footer

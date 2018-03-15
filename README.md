@@ -1,0 +1,1 @@
+El esqueleto de un website realizado con Pug y con unos pocos toques de CSS con Sass.
