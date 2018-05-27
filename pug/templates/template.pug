@@ -4,16 +4,13 @@ block config
 doctype html
 html(lang="es")
     head
-        block head
-            include ../blocks/head.pug
+        include ../blocks/head.pug
     body
         header.cabecera
             .cabecera__contenedor
-               block cabecera
                 include ../blocks/cabecera.pug
         .banner
-            block banner
-                include ../blocks/banner.pug
+            include ../blocks/banner.pug
         .contenedor
             if main 
                 main.main
@@ -23,8 +20,6 @@ html(lang="es")
                     block main
             if aside
                 aside.aside
-                    block aside
-                        include ../blocks/siguenos.pug
+                    include ../blocks/siguenos.pug
         footer.footer
-            block footer
-                include ../blocks/footer.pug
+            include ../blocks/footer.pug
