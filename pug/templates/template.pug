@@ -17,7 +17,7 @@ html(lang="es")
                 include ../blocks/cabecera.pug
         .banner
             block banner
-                img(src='/img/' + paginaActual + '.jpg')
+                include ../blocks/banner.pug
         .contenedor
             if main 
                 main.main
