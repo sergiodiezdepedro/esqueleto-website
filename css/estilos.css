@@ -11,10 +11,13 @@ body {
 
 img {
   max-width: 100%; }
+  @media screen and (min-width: 768px) {
+    img {
+      display: block; } }
 
 .cabecera {
   background-color: wheat; }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 768px) {
     .cabecera__contenedor {
       width: 80%;
       margin: 0 auto;
@@ -28,7 +31,7 @@ img {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
-  @media screen and (max-width: 47rem) {
+  @media screen and (max-width: 767px) {
     .cabecera__contenedor {
       padding: .5rem 0;
       text-align: center;
@@ -38,7 +41,7 @@ img {
 
 .menu__raiz {
   list-style: none; }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 768px) {
     .menu__raiz {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -48,7 +51,7 @@ img {
   margin-right: .5rem; }
   .menu__item:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 47rem) {
+  @media screen and (max-width: 767px) {
     .menu__item {
       display: inline-block; } }
 
@@ -62,7 +65,7 @@ img {
 .contenedor {
   width: 80%;
   margin: 1rem auto 2rem; }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 768px) {
     .contenedor {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -71,7 +74,7 @@ img {
       -ms-flex-pack: justify;
       justify-content: space-between; } }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 768px) {
   .main {
     width: 80%; } }
 
@@ -88,7 +91,7 @@ img {
   .main--full p:last-child {
     margin-bottom: 0; }
 
-@media screen and (max-width: 47rem) {
+@media screen and (max-width: 767px) {
   .main,
   .main--full {
     margin-bottom: 2rem; } }

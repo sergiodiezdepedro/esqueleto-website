@@ -6,19 +6,23 @@
     box-sizing: border-box;
 }
 
-$bk: 48rem;
+$bk: 768px;
 $light-color: wheat;
 $links-color: brown;
 $links-color-hover: red;
 $remark-color: #ff3d00;
 $dark-color: #3e2723;
-$fuente-principal: Helvetica,Arial,sans-serif;
+$fuente-principal: Helvetica, Arial,sans-serif;
+
 body {
     font-family: $fuente-principal;
 }
 
 img {
     max-width: 100%;
+    @media screen and (min-width: $bk) {
+        display: block;
+    }
 }
 
 .cabecera {
