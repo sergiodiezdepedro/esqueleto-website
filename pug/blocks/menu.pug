@@ -1,6 +1,11 @@
 ul.menu__raiz
-    each pagina in paginas
-        if pagina == 'inicio'
-            li.menu__item: a.menu__link(href='/') #{pagina}
-        else
-            li.menu__item: a.menu__link(href=pagina + '.html') #{pagina}
+  li.menu__item 
+   a.menu__link(class={activa: urlActiva === '/'} href='/') Inicio
+  li.menu__item 
+   a.menu__link(class={activa: urlActiva === 'nosotros'} href='/nosotros.html') Nosotros
+  li.menu__item 
+   a.menu__link(class={activa: urlActiva === 'servicios'} href='/servicios.html') Servicios
+  li.menu__item 
+   a.menu__link(class={activa: urlActiva === 'portfolio'} href='/portfolio.html') Portfolio
+  li.menu__item 
+   a.menu__link(class={activa: urlActiva === 'contacto'} href='/contacto.html') Contacto

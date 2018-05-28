@@ -57,10 +57,16 @@ img {
 
 .menu__link {
   color: brown;
-  text-decoration: none;
-  text-transform: capitalize; }
+  text-decoration: none; }
   .menu__link:hover {
     text-decoration: underline; }
+
+.activa {
+  color: #ff3d00;
+  border-top: 2px solid #ff3d00;
+  border-bottom: 2px solid #ff3d00; }
+  .activa:hover {
+    text-decoration: none; }
 
 .contenedor {
   width: 80%;

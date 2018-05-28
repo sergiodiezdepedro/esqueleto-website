@@ -67,9 +67,17 @@ img {
 .menu__link {
     color: $links-color;
     text-decoration: none;
-    text-transform: capitalize;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.activa {
+    color: $remark-color;
+    border-top: 2px solid $remark-color;
+    border-bottom: 2px solid $remark-color;
+    &:hover {
+        text-decoration: none;
     }
 }
 
