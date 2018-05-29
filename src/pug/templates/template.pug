@@ -1,16 +1,16 @@
 block config
-    include ../config/config.pug
+    include ../config/config
 
 doctype html
 html(lang="es")
     head
-        include ../blocks/head.pug
+        include ../includes/head
     body
         header.cabecera
             .cabecera__contenedor
-                include ../blocks/cabecera.pug
+                include ../includes/cabecera
         .banner
-            include ../blocks/banner.pug
+            include ../includes/banner
         .contenedor
             if main 
                 main.main
@@ -20,6 +20,6 @@ html(lang="es")
                     block main
             if aside
                 aside.aside
-                    include ../blocks/siguenos.pug
+                    include ../includes/siguenos
         footer.footer
-            include ../blocks/footer.pug
+            include ../includes/footer
