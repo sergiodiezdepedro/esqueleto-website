@@ -1,5 +1,5 @@
 {
-  "name": "Workflow",
+  "name": "workflow",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.html",
@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",

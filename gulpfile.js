@@ -1,6 +1,7 @@
 /* jshint esversion: 6 */
 
 const gulp = require('gulp'),
+    del = require('del'),
     imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify'),
     plumber = require('gulp-plumber'),
@@ -14,6 +15,12 @@ const gulp = require('gulp'),
     pug = require('gulp-pug');
 
 let reload = browserSync.reload;
+
+gulp.task('limpiar', () => {
+    return del([
+        'dist/**/*'
+    ]);
+});
 
 gulp.task('copyHtml', () => {
     gulp.src('src/*.html')
@@ -95,7 +102,7 @@ gulp.task('uncss', () => {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('default', ['copyHtml', 'optimizarImagen', 'sass', 'browser-sync', 'pug'], () => {
+gulp.task('default', ['limpiar', 'copyHtml', 'optimizarImagen', 'sass', 'browser-sync', 'pug'], () => {
     gulp.watch('src/*.html', ['copyHtml']);
     gulp.watch('src/img/*', ['optimizarImagen']);
     gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['sass']);
